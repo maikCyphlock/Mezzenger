@@ -1,0 +1,54 @@
+// package main
+
+// import (
+// 	"bufio"
+// 	"fmt"
+// 	"net"
+// 	"os"
+// )
+
+// const serverAddress = "localhost:8080"
+
+// func readUserInput() (string, error) {
+// 	scanner := bufio.NewScanner(os.Stdin)
+// 	fmt.Print("Enter message to send: ")
+// 	scanner.Scan()
+// 	if err := scanner.Err(); err != nil {
+// 		return "", err
+// 	}
+// 	return scanner.Text(), nil
+// }
+
+// func sendMessage(message string) error {
+// 	conn, err := net.Dial("tcp", serverAddress)
+// 	if err != nil {
+// 		return err
+// 	}
+// 	defer conn.Close() // Close connection on exit
+
+// 	_, err = conn.Write([]byte(message))
+// 	if err != nil {
+// 		return err
+// 	}
+
+// 	fmt.Println("Sent message:", message)
+// 	return nil
+// }
+
+// func main() {
+// 	for {
+// 		message, err := readUserInput()
+// 		if err != nil {
+// 			fmt.Println("Error reading input:", err)
+// 			continue
+// 		}
+
+// 		err = sendMessage(message)
+// 		if err != nil {
+// 			fmt.Println("Error sending message:", err)
+// 			continue
+// 		}
+
+// 		fmt.Println("Message logged and sent!")
+// 	}
+// }

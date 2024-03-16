@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <style>
+      /* Body styles (optional) */
+      body {
+        font-family: sans-serif; /* Set a preferred font */
+        margin: 0; /* Remove default margin */
+        display: flex; /* Allow chat and input area to fit side-by-side */
+        flex-direction: column;
+        min-height: 100vh; /* Set minimum height for viewport */
+      }
+
+      /* Chat window styles */
+      #message {
+        border: 1px solid #ddd;
+        padding: 10px;
+        overflow-y: scroll; /* Enable scrolling for long chats */
+        height: 300px; /* Set a preferred height for the chat window */
+        flex: 1; /* Allow chat window to fill available space */
+      }
+
+      #message p {
+        margin: 5px 0; /* Add some space between messages */
+        padding: 10px;
+        border-radius: 5px; /* Add rounded corners to messages */
+      }
+
+      #message p:nth-child(2n + 1) {
+        /* Style the first message differently (optional) */
+        background-color: #eee;
+      }
+
+      /* Input area styles */
+      #message-input {
+        flex: 1; /* Allow input field to fill available space */
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px; /* Add rounded corners to input field */
+      }
+
+      #send-button {
+        padding: 10px 20px;
+        background-color: #4caf50; /* Green color for send button */
+        color: white;
+        border: none;
+        border-radius: 5px; /* Add rounded corners to button */
+        cursor: pointer; /* Change cursor style on hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="message"></div>
+    <div>
+      <input type="text" id="message-input" />
+      <button id="send-button">Send</button>
+    </div>
+
+    <script src="./js/app.js" defer type="module"></script>
+  </body>
+</html>
